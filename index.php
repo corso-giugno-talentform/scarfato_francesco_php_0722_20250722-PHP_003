@@ -43,8 +43,8 @@ echo "\n";
  * "Mi trovo in Europa, Italia, Puglia, Ba, Monopoli, Via Roma"
 **/
 
- class Continent
- {
+class Continent
+{
     public $nameContinent;
 
     public function __construct($continent)
@@ -134,7 +134,6 @@ class Location extends Street
     }
 }
 
-
 $myLocation = new Location('Europa', 'Italia', 'Emilia Romagna', 'FE', 'Terre del Reno', 'via Roma, 666');
 $myLocation->getMyCurrentLocation();
 
@@ -218,14 +217,6 @@ class Coldlooded extends Vertebrates
     }
 }
 
-class Fish extends Coldlooded
-{
-    public function iAm()
-    {
-        return parent::iAm() . " -> Sono un Pesce \n";
-    }
-}
-
 class Repitile extends Coldlooded
 {
     protected function iAm()
@@ -242,20 +233,34 @@ class Amphibian extends Coldlooded
     }
 }
 
+
+class Fish extends Coldlooded
+{
+    public function __construct()
+    {
+        echo parent::iAm() . " -> Sono un Pesce \n";
+    }
+}
+
+class Frog extends Amphibian
+{
+    public function __construct()
+    {
+        echo parent::iAm() . " -> Sono una rana \n";
+    }
+}
+
 class Leon extends Mammal
 {
-    public function iAm()
+    public function __construct()
     {
-        return parent::iAm() . " -> Sono un Leon \n";
+        echo parent::iAm() . " -> Sono un Leon \n";
     }
 }
 
 $magikarp = new Fish();
-echo $magikarp->iAm();
-
 $leon = new Leon();
-echo $leon->iAm();
-
+$frog = new Frog();
 
 echo "\n";
 echo "# ############################################################################ \n";
@@ -345,7 +350,6 @@ $fiat->setNumTelaio('Panda-6666');
 echo "Telaio " . $fiat->getNumTelaio() . "\n";
 
 print_r($fiat);
-
 
 
 echo "\n";
