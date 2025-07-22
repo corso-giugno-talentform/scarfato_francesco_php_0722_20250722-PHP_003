@@ -71,4 +71,13 @@ print_r($newPost);
 
 echo $newPost->categoria->getMyCategory();
 
-
+echo "\n";
+echo "# ############################################################################ \n";
+echo "# ESERCIZIO 3 \n";
+echo "# ############################################################################ \n";
+echo "\n";
+/**
+ * Creare il proprio Robot Tesla, seguendo il modello visto a lezione
+ * Mettere ogni classe (abstract o no) in un file, mettendo require nell'index.php
+ * Creare un esercito random di Tesla Robot
+**/

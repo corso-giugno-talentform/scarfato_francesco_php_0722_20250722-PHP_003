@@ -2,12 +2,23 @@
 require_once "classes/classComputer.php";
 require_once "classes/classCPU.php";
 require_once "classes/classRam.php";
-require_once "classes/classSchedaVideo.php";
+require_once "classes/classVideo.php";
 
-$cpu = new CPU('i8');
-$ram = new Ram('8GB');
-$video = new SchedaVideo('Nvidia');
+$computers = [
+    new Computer(
+        new CPU('i8'),
+        new Ram('8GB'),
+        new Video('Nvidia')
+    ),
 
-$computer = new Computer($cpu, $ram, $video);
+    new Computer(
+        new CPU('M4'),
+        new Ram('32GB'),
+        new Video('AMD Radeon R9 M295X 4 GB')
+    ),
 
-print_r($computer);
+];
+
+print_r($computers);
+
+echo $computers[0]->video->name . "\n";

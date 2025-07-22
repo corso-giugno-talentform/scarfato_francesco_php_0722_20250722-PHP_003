@@ -7,7 +7,7 @@ class Computer
     public $cpu;
     public $video;
 
-    public function __construct(CPU $cpu, Ram $ram, SchedaVideo $video)
+    public function __construct(CPU $cpu, Ram $ram, Video $video)
     {
         $this->ram = $ram;
         $this->cpu = $cpu;

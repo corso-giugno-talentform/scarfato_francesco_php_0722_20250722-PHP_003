@@ -1,5 +1,6 @@
 <?php
-class SchedaVideo extends absDevice
+
+class Video extends absDevice
 {
     public function __construct($name) {
         $this->name = $name;

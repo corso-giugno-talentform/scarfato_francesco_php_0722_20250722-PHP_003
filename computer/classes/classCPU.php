@@ -1,4 +1,5 @@
 <?php
+
 class CPU extends absDevice
 {
     public function __construct($name) {
