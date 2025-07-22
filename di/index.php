@@ -1,5 +1,6 @@
 <?php
 require_once "class.php";
+require_once "tesla-robot.php";
 
 echo "\n";
 echo "# ############################################################################ \n";
@@ -81,3 +82,7 @@ echo "\n";
  * Mettere ogni classe (abstract o no) in un file, mettendo require nell'index.php
  * Creare un esercito random di Tesla Robot
 **/
+
+$robot = new TeslaRobot('Atlas-001', new Mano(), new Piede());
+
+print_r($robot);

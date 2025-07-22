@@ -7,3 +7,10 @@ class CPU extends absDevice
         $this->type = 'cpu';
     }
 }
+
+class Intel extends CPU
+{
+     public function __construct() {
+        parent::__construct('Intel');
+    }
+}

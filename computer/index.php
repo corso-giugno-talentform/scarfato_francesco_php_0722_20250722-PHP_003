@@ -17,6 +17,12 @@ $computers = [
         new Video('AMD Radeon R9 M295X 4 GB')
     ),
 
+    new Computer(
+        new Intel(),
+        new Ram('16Gb'),
+        new Video('MSI Nvidia GeForce RTX 3050')
+    )
+
 ];
 
 print_r($computers);
